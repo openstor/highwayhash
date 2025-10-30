@@ -1,28 +1,27 @@
-linters-settings:
-  golint:
-    min-confidence: 0
-
-  misspell:
-    locale: US
+version: "2"
 
 linters:
-  disable-all: true
+  default: none
   enable:
-    - typecheck
-    - goimports
-    - misspell
     - govet
     - revive
     - ineffassign
-    - gosimple
+    - staticcheck  # replaces gosimple in v2
     - unparam
     - unused
+    - misspell
+  settings:
+    misspell:
+      locale: US
+  exclusions:
+    rules:
+      - path: '(.+)\.go$'
+        text: 'should have a package comment'
+      - path: '(.+)\.go$'
+        text: 'error strings should not be capitalized or end with punctuation or a newline'
+      - path: '(.+)\.go$'
+        text: 'should have comment'  # TODO(aead): Remove once all exported ident. have comments!
 
-issues:
-  exclude-use-default: false
-  exclude:
-      - should have a package comment
-      - error strings should not be capitalized or end with punctuation or a newline
-      - should have comment           # TODO(aead): Remove once all exported ident. have comments!
-service:
-  golangci-lint-version: 1.51.2 # use the fixed version to not introduce new linters unexpectedly
+formatters:
+  enable:
+    - goimports

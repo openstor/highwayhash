@@ -1,6 +1,6 @@
-// Copyright (c) 2018 Minio Inc. All rights reserved.
-// Use of this source code is governed by a license that can be
-// found in the LICENSE file.
+// SPDX-FileCopyrightText: 2025 openstor contributors
+// SPDX-FileCopyrightText: 2015-2025 MinIO, Inc.
+// SPDX-License-Identifier: Apache-2.0
 
 package highwayhash
 
@@ -8,7 +8,6 @@ import (
 	"encoding/hex"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 )
 
@@ -72,7 +71,7 @@ func ExampleNew64() {
 		return hash.Sum64(), err
 	}
 
-	dir, err := ioutil.ReadDir(".")
+	dir, err := os.ReadDir(".")
 	if err != nil {
 		fmt.Printf("Failed to read current directory: %v", err) // add error handling
 		return

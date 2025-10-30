@@ -1,5 +1,5 @@
-[![Godoc Reference](https://godoc.org/github.com/minio/highwayhash?status.svg)](https://godoc.org/github.com/minio/highwayhash)
-[![Build Status](https://travis-ci.org/minio/highwayhash.svg?branch=master)](https://travis-ci.org/minio/highwayhash)
+[![Godoc Reference](https://godoc.org/github.com/openstor/highwayhash?status.svg)](https://godoc.org/github.com/openstor/highwayhash)
+[![Build Status](https://travis-ci.org/openstor/highwayhash.svg?branch=master)](https://travis-ci.org/openstor/highwayhash)
 
 ## HighwayHash
 
@@ -21,7 +21,7 @@ All three output sizes of HighwayHash have been declared [stable](https://github
 
 ### Installation
 
-Install: `go get -u github.com/minio/highwayhash`
+Install: `go get -u github.com/openstor/highwayhash`
 
 ### Intel Performance
 
